@@ -1,0 +1,477 @@
+{
+	"info": {
+		"_postman_id": "456fbbb1-fd87-4670-8057-ee7705b24a23",
+		"name": "Polycade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pricing Models",
+			"item": [
+				{
+					"name": "Get Pricing Model",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/pricing-model",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pricing-model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pricing Model By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/pricing-model/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pricing-model",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Pricing Model",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Super Value Option2\",\n    \"pricing\": [\n        {\n            \"price\": 3,\n            \"name\": \"10 minutes\",\n            \"value\": 10\n        },\n        {\n            \"price\": 5,\n            \"name\": \"20 minutes\",\n            \"value\": 20\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pricing-model",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pricing-model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Pricing Model",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Super Value Option1\",\n    \"pricing\": [\n        {\n            \"price\": 3,\n            \"name\": \"10 minutes1\",\n            \"value\": 10\n        },\n        {\n            \"price\": 5,\n            \"name\": \"20 minutes1\",\n            \"value\": 20\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pricing-model/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pricing-model",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pricing Model",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/pricing-model/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pricing-model",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pricing Model Prices By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/pricing-model/3/prices",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pricing-model",
+								"3",
+								"prices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Pricing Model Prices By Id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"price\": 9,\n        \"name\": \"100 minutes\",\n        \"value\": 100\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pricing-model/1/prices",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pricing-model",
+								"1",
+								"prices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pricing Model Prices By Id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pricing-model/1/prices/9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pricing-model",
+								"1",
+								"prices",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Machines",
+			"item": [
+				{
+					"name": "Get Machines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/machine",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"machine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Machine By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/machine",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"machine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Machine",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Super Value Option\",\n    \"pricingModel\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/machine",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"machine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Machine",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Super Value Option1\",\n    \"pricing\": [\n        {\n            \"price\": 3,\n            \"name\": \"10 minutes1\",\n            \"value\": 10\n        },\n        {\n            \"price\": 5,\n            \"name\": \"20 minutes1\",\n            \"value\": 20\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/machine/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"machine",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Machine",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/machine/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"machine",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Machine Pricing Model",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/machine/1/prices/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"machine",
+								"1",
+								"prices",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Machine Pricing Model",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/machine/1/prices/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"machine",
+								"1",
+								"prices",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Machine Pricing Model",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/machine/1/prices",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"machine",
+								"1",
+								"prices"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
