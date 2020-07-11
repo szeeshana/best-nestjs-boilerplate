@@ -13,7 +13,7 @@ import { ResponseFormat } from '../../interfaces/IResponseFormat';
 import { ResponseFormatService } from '../../shared/services/response-format.service';
 import { PricingService } from '../pricingModel/prices.service';
 import { MachineService } from './machine.service';
-@Controller('machine')
+@Controller('machines')
 export class MachineController {
     constructor(
         private readonly _machineService: MachineService,

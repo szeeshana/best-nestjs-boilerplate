@@ -12,7 +12,7 @@ import * as _ from 'lodash';
 import { ResponseFormat } from '../../interfaces/IResponseFormat';
 import { ResponseFormatService } from '../../shared/services/response-format.service';
 import { PricingService } from './prices.service';
-@Controller('pricing-model')
+@Controller('pricing-models')
 export class PricingController {
     constructor(private readonly _pricingService: PricingService) {}
 
